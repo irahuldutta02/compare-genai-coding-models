@@ -137,25 +137,25 @@ export default function Home() {
                 <tr>
                   <th
                     scope="col"
-                    className="px-6 py-4 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider"
+                    className="px-6 py-4 text-center text-xs font-semibold text-gray-300 uppercase tracking-wider"
                   >
                     Model
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-4 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider"
+                    className="px-6 py-4 text-center text-xs font-semibold text-gray-300 uppercase tracking-wider"
                   >
                     Owned by
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-4 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider"
+                    className="px-6 py-4 text-center text-xs font-semibold text-gray-300 uppercase tracking-wider"
                   >
                     Result
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-4 text-left text-xs font-semibold text-gray-300 uppercase tracking-wider"
+                    className="px-6 py-4 text-center text-xs font-semibold text-gray-300 uppercase tracking-wider"
                   >
                     Last Updated
                   </th>
@@ -186,7 +186,7 @@ export default function Home() {
                       </div>
                     </td>
                     <td className="px-6 py-5 whitespace-nowrap">
-                      <div className="flex items-center">
+                      <div className="flex items-center justify-center">
                         <div className="ml-4">
                           <div className="text-sm font-medium text-white">
                             {model.company}
@@ -195,7 +195,7 @@ export default function Home() {
                       </div>
                     </td>
                     <td className="px-6 py-5 text-sm text-gray-400">
-                      <div className="flex space-x-4">
+                      <div className="flex justify-center space-x-4">
                         <Link
                           href={`/${model.slug}`}
                           className="px-4 py-2 bg-purple-900/30 text-purple-300 rounded-lg hover:bg-purple-800/40 transition-all duration-200 hover:scale-105"
@@ -215,7 +215,7 @@ export default function Home() {
                         </span>
                       </div>
                     </td>
-                    <td className="px-6 py-5 whitespace-nowrap text-sm text-gray-400">
+                    <td className="px-6 py-5 whitespace-nowrap text-center text-sm text-gray-400">
                       {format(model.lastUpdated, "dd/mm/yyyy")}
                     </td>
                   </tr>
