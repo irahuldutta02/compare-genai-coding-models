@@ -13,7 +13,6 @@ export default function Home() {
   const tableRef = useRef(null);
   const headerRef = useRef(null);
   const promptRef = useRef(null);
-  const [isPromptExpanded, setIsPromptExpanded] = useState(false);
 
   useEffect(() => {
     // Apply dark mode class to body
@@ -86,35 +85,10 @@ export default function Home() {
               </div>
               <h2 className="text-2xl font-semibold text-white">Prompt</h2>
             </div>
-            <div
-              className="text-gray-300 transition-transform duration-300"
-              style={{
-                transform: isPromptExpanded ? "rotate(180deg)" : "rotate(0deg)",
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
           </div>
 
           <div
-            className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              isPromptExpanded
-                ? "max-h-[1000px] opacity-100"
-                : "max-h-0 opacity-0"
-            }`}
+            className={`overflow-hidden transition-all duration-500 ease-in-out max-h-[1000px] opacity-100`}
           >
             <div className="bg-gray-700 rounded-xl p-6">
               <p className="text-gray-300 text-sm leading-relaxed">
@@ -151,20 +125,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-
-          {!isPromptExpanded && (
-            <div className="bg-gray-700 rounded-xl p-4 mt-2">
-              <p className="text-gray-300 text-sm truncate">
-                {standardPrompt.substring(0, 100)}...
-              </p>
-              <button
-                onClick={togglePrompt}
-                className="mt-2 text-blue-400 text-sm hover:text-blue-300 transition-colors duration-200"
-              >
-                Show more
-              </button>
-            </div>
-          )}
         </div>
 
         <div
