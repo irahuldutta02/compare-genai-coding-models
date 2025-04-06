@@ -1,1 +1,1 @@
-# compare-coding-model
+# compare-genai-coding-models
