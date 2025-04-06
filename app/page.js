@@ -205,18 +205,19 @@ export default function Home() {
                           View
                         </Link>
 
-                        <span
+                        {/* <span
                           className="px-4 py-2 bg-purple-900/30 text-purple-300 rounded-lg hover:bg-purple-800/40 transition-all duration-200 hover:scale-105 cursor-pointer"
                           onClick={() => {
                             navigator.clipboard.writeText(model.slug);
                           }}
                         >
                           {model?.slug}
-                        </span>
+                        </span> */}
                       </div>
                     </td>
                     <td className="px-6 py-5 whitespace-nowrap text-center text-sm text-gray-400">
-                      {format(model.lastUpdated, "dd/mm/yyyy")}
+                      {/* dd-yy-mm  */}
+                      {format(new Date(model.lastUpdated), "dd-MM-yyyy")}
                     </td>
                   </tr>
                 ))}
