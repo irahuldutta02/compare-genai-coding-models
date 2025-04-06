@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { animate, inView, stagger } from "motion";
 import Image from "next/image";
 
-const standardPrompt = `Create a landing page for an AI-powered expense tracker using a modern design. Return the full page in a single component, utilizing Tailwind CSS and JSX as a Next.js client-side component.`;
+const standardPrompt = `Create a landing page for an AI-powered expense tracker using a modern dark mode design. Return the full page in a single Next.js client-side component, utilizing Tailwind CSS and JSX. Where an image is needed, use Next.js Image component with src="/assets/placeholder.png".`;
 
 export default function Home() {
   const tableRef = useRef(null);
@@ -199,9 +199,20 @@ export default function Home() {
                         <Link
                           href={`/${model.slug}`}
                           className="px-4 py-2 bg-purple-900/30 text-purple-300 rounded-lg hover:bg-purple-800/40 transition-all duration-200 hover:scale-105"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           View
                         </Link>
+
+                        {/* <span
+                          className="px-4 py-2 bg-purple-900/30 text-purple-300 rounded-lg hover:bg-purple-800/40 transition-all duration-200 hover:scale-105 cursor-pointer"
+                          onClick={() => {
+                            navigator.clipboard.writeText(model.slug);
+                          }}
+                        >
+                          {model?.slug}
+                        </span> */}
                       </div>
                     </td>
                     <td className="px-6 py-5 whitespace-nowrap text-sm text-gray-400">
